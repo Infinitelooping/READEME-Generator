@@ -21,7 +21,7 @@ function generateMarkdown(data) {
 
   ## Description
 
-  ${data.descrption}
+  ${data.description}
 
   ## Table of Contents (Optional)
 
@@ -29,7 +29,7 @@ function generateMarkdown(data) {
 
   ## Installation
 
-  ${data.installation}
+  ${data.installInstruct}
 
   ## Usage
 
