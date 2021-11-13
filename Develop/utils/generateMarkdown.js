@@ -55,3 +55,10 @@ function generateMarkdown(data) {
 }
 
 module.exports = generateMarkdown;
+
+module.exports = {
+  generateMarkdown: generateMarkdown,
+  renderLicenseSection: renderLicenseSection,
+  renderLicenseLink: renderLicenseLink,
+  renderLicenseBadge: renderLicenseBadge
+};
