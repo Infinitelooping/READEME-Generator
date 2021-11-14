@@ -41,7 +41,7 @@ function generateMarkdown(data) {
 
   ## Contributing
 
-  ${data.contributing}
+  Made with the love of: ${data.contributing}
 
   ## Tests
 
@@ -49,8 +49,11 @@ function generateMarkdown(data) {
 
   ## Questions
 
-  ${data.questions}
+  If you have questions you can view my github below, and email me directly:
 
+  My github: https://github.com/${data.github}
+
+  Email me at: [${data.email}](mailto:${data.email}?subject=READEME.md Generator)
 `;
 }
 
