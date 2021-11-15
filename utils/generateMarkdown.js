@@ -1,9 +1,7 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
-  if(!license) {
-    return "";
-  }
+  
 }
 
 // TODO: Create a function that returns the license link
@@ -23,9 +21,14 @@ function generateMarkdown(data) {
 
   ${data.description}
 
-  ## Table of Contents (Optional)
+  ## Table of Contents
 
-  ${data.tableOfContents}
+  [Installation](#installation)
+  [Usage](#Usage)
+  [License](#License)
+  [Contributing](#Contributing)
+  [Tests](#Tests)
+  [Quesetions](#Questions)
 
   ## Installation
 
@@ -37,11 +40,11 @@ function generateMarkdown(data) {
 
   ## License
   
-  ${data.license}
+  This project is under the following licensing: ${data.license}
 
   ## Contributing
 
-  Made with the love of: ${data.contributing}
+  ${data.contributing}
 
   ## Tests
 
@@ -53,8 +56,16 @@ function generateMarkdown(data) {
 
   My github: https://github.com/${data.github}
 
-  Email me at: [${data.email}](mailto:${data.email}?subject=READEME.md Generator)
+  Email me at: [${data.email}](mailto: ${data.email})
+
+  I will respond with 24 hours, please provide as the subject the project 
+  and issue you have questions about. Thanks.
 `;
 }
 
-module.exports = generateMarkdown;
+module.exports = {
+  renderLicenseLink:  renderLicenseLink,
+  renderLicenseSection: renderLicenseSection,
+  renderLicenseBadge: renderLicenseBadge,
+  generateMarkdown: generateMarkdown
+}

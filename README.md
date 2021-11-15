@@ -1,33 +1,38 @@
 
-  # dfdfd
+  # Travis Lloyd stuff
 
   ## Description
 
-  fdfdf
+  does stuff
 
-  ## Table of Contents (Optional)
+  ## Table of Contents
 
-  undefined
+  [Installation](#installation)
+  [Usage](#Usage)
+  [License](#License)
+  [Contributing](#Contributing)
+  [Tests](#Tests)
+  [Quesetions](#Questions)
 
   ## Installation
 
-  dfdf
+  does more stuff
 
   ## Usage
 
-  undefined
+  please only do this stuff, not this
 
   ## License
   
-  lic1
+  This project is under the following licensing: GNU GPLv3
 
   ## Contributing
 
-  Made with the love of: undefined
+  please help review code, and use proper commit messages
 
   ## Tests
 
-  undefined
+  here is a testing suite
 
   ## Questions
 
@@ -35,4 +40,7 @@
 
   My github: https://github.com/infinitelooping
 
-  Email me at: [travis.t.lloyd1996@gmail.com](mailto:travis.t.lloyd1996@gmail.com?subject=READEME.md Generator)
+  Email me at: [travis.t.lloyd1996@gmail.com](mailto: travis.t.lloyd1996@gmail.com)
+
+  I will respond with 24 hours, please provide as the subject the project 
+  and issue you have questions about. Thanks.

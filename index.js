@@ -1,8 +1,8 @@
 // TODO: Include packages needed for this application
 const inquirer = require("inquirer");
 const fs = require('fs');
-const { formatWithOptions } = require("util");
-const generateMarkdown = require("./utils/generateMarkdown.js");
+// const { formatWithOptions } = require("util");
+const {generateMarkdown, renderLicenseBadge, renderLicenseLink, renderLicenseSection} = require("./utils/generateMarkdown.js");
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -38,10 +38,23 @@ const questions = [
         }
     },
     {
-        type: "checkbox",
+        type: "input",
+        name: "usage",
+        message: "What are usage guidelines that you want for other developers to know?",
+        validate: usage => {
+            if (usage) {
+                return true
+            } else {
+                console.log("Please enter guidelines")
+                return false;
+            }
+        }
+    },
+    {
+        type: "list",
         name: "license",
         message: "Please choose the license you have",
-        choices: ["lic1", "lic2", "lic3", "lic4"],
+        choices: ["MIT License", "GNU GPLv3" , "GNU AGPLv3", "GNU LGPLv3", "Mozilla Public License 2.0", "Apache License 2.0", "Boost Software License 1.0", "The Unlicense"],
         validate: license => {
             if (license) {
                 return true
@@ -50,6 +63,24 @@ const questions = [
                 return false;
             }
         }
+    },
+    {
+        type: "input",
+        name: "contributing",
+        message: "Write your own contributions guidelines for other developers helping.",
+        validate: contribute => {
+            if (contribute) {
+                return true;
+            } else {
+                console.log("Please add contribution guidelines.")
+                return false;
+            }
+        }
+    },
+    {
+        type: "input",
+        name: "tests",
+        message: "Enter tests the users can use.",
     },
     {
         type: "input",
@@ -82,6 +113,7 @@ const questions = [
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
+
         return fs.writeFileSync(fileName, data);
 };
 
